@@ -1,0 +1,17 @@
+﻿<Window x:Class="Contagious.ChangeFolder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Contagious"
+        mc:Ignorable="d"
+        Title="ChangeFolder" Height="65" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Name="PathTextBox"  Content="{Binding dir}" BorderBrush="Black" BorderThickness="1" Height="25" MouseDoubleClick="FindFolder"/>
+        <Button Grid.Column="1" Content="Change" HorizontalAlignment="Right" Click="RefreshList" Height="25"/>
+    </Grid>
+</Window>
